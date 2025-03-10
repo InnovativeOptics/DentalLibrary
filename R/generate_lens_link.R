@@ -21,22 +21,26 @@ generate_lens_link <- function(dental_data, loupe_insert){
            `Website`= dplyr::case_when(loupe_insert$`Innovative Optics Insert` %in% c("IVL") & `Eyewear Lens Compatible` == "Pi1" ~ "https://innovativeoptics.com/product/pi1-inview-large-laser-clip-in/",
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVL.R") & `Eyewear Lens Compatible` == "Pi1" ~ "https://innovativeoptics.com/product/ivl-r-pi1-laser-insert-for-loupes/",
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVR") & `Eyewear Lens Compatible` == "Pi1" ~ "https://innovativeoptics.com/product/pi1-inview-large-laser-clip-in/",
-                                loupe_insert$`Innovative Optics Insert` %in% c("IVR.R") & `Eyewear Lens Compatible` == "Pi1" ~ "https://innovativeoptics.com/product/ivr-r-pi1-laser-insert-for-loupes/",
+
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVL") & `Eyewear Lens Compatible` == "Pi17" ~ "https://innovativeoptics.com/product/pi17-inview-large-laser-clip-in/",
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVL.R") & `Eyewear Lens Compatible` == "Pi17" ~ "https://innovativeoptics.com/product/ivl-r-pi17-laser-insert-for-loupes/",
+                                loupe_insert$`Innovative Optics Insert` %in% c("IVR") & `Eyewear Lens Compatible` == "Pi17" ~ "https://innovativeoptics.com/product/pi17-inview-large-laser-clip-in/",
+
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVL") & `Eyewear Lens Compatible` == "Pi19" ~ "https://innovativeoptics.com/product/pi19-inview-large-laser-clip-in/",
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVL.R") & `Eyewear Lens Compatible` == "Pi19" ~ "https://innovativeoptics.com/product/ivl-r-pi19-laser-insert-for-loupes/",
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVR") & `Eyewear Lens Compatible` == "Pi19" ~ "https://innovativeoptics.com/product/pi19-inview-large-laser-clip-in/",
-                                loupe_insert$`Innovative Optics Insert` %in% c("IVR.R") & `Eyewear Lens Compatible` == "Pi19" ~ "https://innovativeoptics.com/product/ivr-r-pi19-laser-insert-for-loupes/",
+
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVL") & `Eyewear Lens Compatible` == "Pi23" ~ "https://innovativeoptics.com/product/pi23-inview-large-laser-clip-in/",
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVL.R") & `Eyewear Lens Compatible` == "Pi23" ~ "https://innovativeoptics.com/product/ivl-r-pi23-laser-insert-for-loupes/",
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVR") & `Eyewear Lens Compatible` == "Pi23" ~ "https://innovativeoptics.com/product/pi23-inview-large-laser-clip-in/",
-                                loupe_insert$`Innovative Optics Insert` %in% c("IVR.R") & `Eyewear Lens Compatible` == "Pi23" ~ "https://innovativeoptics.com/product/ivr-r-pi23-laser-insert-for-loupes/",
-                                loupe_insert$`Innovative Optics Insert` %in% c("IVR.R") & `Eyewear Lens Compatible` == "Pi23" ~ "https://innovativeoptics.com/product/ivr-r-pi23-laser-insert-for-loupes/",
+
+                                loupe_insert$`Innovative Optics Insert` %in% c("IVL") & `Eyewear Lens Compatible` == "Pi32" ~ "https://innovativeoptics.com/product/pi32-inview-large-laser-clip-in/",
+                                loupe_insert$`Innovative Optics Insert` %in% c("IVL.R") & `Eyewear Lens Compatible` == "Pi32" ~ "https://innovativeoptics.com/product/ivl-r-pi32-laser-insert-for-loupes/",
+                                loupe_insert$`Innovative Optics Insert` %in% c("IVR") & `Eyewear Lens Compatible` == "Pi32" ~ "https://innovativeoptics.com/product/pi32-inview-large-laser-clip-in/",
+
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVL") & `Eyewear Lens Compatible` == "Gi1" ~ "https://innovativeoptics.com/product/gi1-inview-large-laser-clip-in/",
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVL.R") & `Eyewear Lens Compatible` == "Gi1" ~ "https://innovativeoptics.com/product/ivl-r-gi1-laser-insert-for-loupes/",
                                 loupe_insert$`Innovative Optics Insert` %in% c("IVR") & `Eyewear Lens Compatible` == "Gi1" ~ "https://innovativeoptics.com/product/gi1-inview-regular-laser-clip-in/",
-                                loupe_insert$`Innovative Optics Insert` %in% c("IVR.R") & `Eyewear Lens Compatible` == "Gi1" ~ "https://innovativeoptics.com/product/gi1-inview-regular-laser-clip-in/",
                                 .default = Website)
     ) %>%
     dplyr::mutate(`INVO Part Number` = glue::glue_safe("<a href='{Website}' target ='_blank'> {INVO Part Number Raw} </a> "))
