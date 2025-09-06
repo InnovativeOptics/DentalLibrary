@@ -37,7 +37,7 @@ generate_filt_data_combined <- function(filt_data_laser, filt_data_loupe){
         x
       })
 
-    } else if(filt_data_loupe$`Compatible Loupe Insert` == "IVL.R"){
+    } else if(filt_data_loupe$`Compatible Loupe Insert` == "IVL.R.2"){
       print("IVL.R Pi1")
       filt_data_laser <- lapply(filt_data_laser, function(x) {
         x[['Website']] <- "https://innovativeoptics.com/product/ivl-r-2-pi1-laser-insert-for-loupes/"
@@ -45,7 +45,7 @@ generate_filt_data_combined <- function(filt_data_laser, filt_data_loupe){
         x
       })
 
-    } else if(filt_data_loupe$`Compatible Loupe Insert` == "IVL.R.2"){
+    } else if(filt_data_loupe$`Compatible Loupe Insert` == "IVL.R"){
       print("IVL.R.2 Pi1")
       filt_data_laser <- lapply(filt_data_laser, function(x) {
         x[['Website']] <- "https://innovativeoptics.com/product/ivl-r-pi1-laser-insert-for-loupes/"
